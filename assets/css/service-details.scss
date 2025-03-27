@@ -1,0 +1,138 @@
+/*
+@File: Pasona Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+==== INDEX PAGE CSS
+
+** - Services Details CSS
+*/
+
+/*================================================
+Default CSS
+=================================================*/
+$font-family: 'Poppins', sans-serif;
+$light-green-color: #44ce6f;
+$white-color: #ffffff;
+$black-color: #0e314c;
+$navlink-color: #4a6f8a;
+$paragraph-color: #6084a4;
+$purple-color: #c679e3;
+$bg-color: #f7fafd;
+$bg-color2: #f9f6f6;
+$hosting-main-color: #032b8d;
+$gradient-color: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+$gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #53eedd, #a6ffcb);
+$transition: .5s;
+$font-size: 14px;
+
+/*================================================
+Services Details CSS
+=================================================*/
+.services-details-desc {
+    h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .services-details-accordion {
+        margin-top: 25px;
+
+        .faq-wrapper[data-v-dd43507e] {
+            max-width: 100%;
+        }
+        .faq {
+            padding: 0;
+        }
+        .accordion {
+            list-style-type: none;
+            padding: 0;
+            border: none !important;
+            border-radius: 0 !important;
+            margin: 0 !important;
+
+            .accordion__item {
+                display: block;
+                margin-bottom: 15px;
+                box-shadow: 0px 0px 5px 0px #eeeeee;
+                border: 1px solid rgba(0,0,0,.125);
+                background: #fff;
+    
+                &:last-child {
+                    margin-bottom: 0 !important;
+                }
+                .accordion__title {
+                    display: block;
+                    padding: 12px 20px 12px 51px;
+                    text-decoration: none;
+                    color: $black-color;
+                    position: relative;
+                    border-bottom: 1px solid $white-color;
+                    background: #f5f9ff;
+                    justify-content: unset;
+                    align-items: unset;
+                    font: {
+                        size: 15px;
+                        weight: 500;
+                    }
+                    &.accordion__title_active {
+                        border-bottom: 1px solid rgba(0,0,0,.125);
+                    }
+                    .accordion__title-text {
+                        margin-right: 0;
+                        line-height: initial;
+                        color: $black-color;
+                    }
+                    .accordion__toggle-button {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 40px;
+                        transform: unset;
+                        text-align: center;
+                        height: 100%;
+                        background: $light-green-color;
+                        color: $white-color;
+    
+                        &::before, &::after {
+                            right: 0;
+                            width: 40%;
+                            background: $white-color;
+                            margin: {
+                                left: auto;
+                                right: auto;
+                            };
+                        }
+                        &.accordion__toggle-button_active {
+                            &::before {
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                }
+                .accordion__value {
+                    position: relative;
+                    overflow: hidden;
+                    color: $paragraph-color;
+                    padding: 15px;
+                    line-height: 1.9;
+                }
+            }
+        }
+    }
+}
+.services-details-area {
+    .separate {
+        margin-top: 80px;
+    }
+}
+.services-details-image {
+    text-align: center;
+}

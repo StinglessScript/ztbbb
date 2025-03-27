@@ -1,0 +1,159 @@
+/*
+@File: Pasona Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+==== INDEX PAGE CSS
+
+** - Features CSS
+*/
+/*================================================
+Default CSS
+=================================================*/
+/*================================================
+Features Details CSS
+=================================================*/
+.features-details-desc h3 {
+  font-size: 20px;
+  margin-bottom: 13px;
+}
+
+.features-details-desc .features-details-list {
+  padding: 0;
+  margin: 20px 0 0;
+  list-style-type: none;
+}
+
+.features-details-desc .features-details-list li {
+  margin-bottom: 12px;
+  color: #6084a4;
+  position: relative;
+  padding-left: 15px;
+}
+
+.features-details-desc .features-details-list li::before {
+  background: #44ce6f;
+  width: 8px;
+  height: 8px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  content: '';
+}
+
+.features-details-desc .features-details-list li:last-child {
+  margin-bottom: 0;
+}
+
+.features-details-desc .features-details-accordion {
+  margin-top: 25px;
+}
+
+.features-details-desc .features-details-accordion .faq-wrapper[data-v-dd43507e] {
+  max-width: 100%;
+}
+
+.features-details-desc .features-details-accordion .faq {
+  padding: 0;
+}
+
+.features-details-desc .features-details-accordion .accordion {
+  list-style-type: none;
+  padding: 0;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+.features-details-desc .features-details-accordion .accordion .accordion__item {
+  display: block;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0px 0px 5px 0px #eeeeee;
+          box-shadow: 0px 0px 5px 0px #eeeeee;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  background: #fff;
+}
+
+.features-details-desc .features-details-accordion .accordion .accordion__item:last-child {
+  margin-bottom: 0 !important;
+}
+
+.features-details-desc .features-details-accordion .accordion .accordion__item .accordion__title {
+  display: block;
+  padding: 12px 20px 12px 51px;
+  text-decoration: none;
+  color: #0e314c;
+  position: relative;
+  border-bottom: 1px solid #ffffff;
+  background: #f5f9ff;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.features-details-desc .features-details-accordion .accordion .accordion__item .accordion__title.accordion__title_active {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.features-details-desc .features-details-accordion .accordion .accordion__item .accordion__title .accordion__title-text {
+  margin-right: 0;
+  line-height: initial;
+  color: #0e314c;
+}
+
+.features-details-desc .features-details-accordion .accordion .accordion__item .accordion__title .accordion__toggle-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  -webkit-transform: unset;
+          transform: unset;
+  text-align: center;
+  height: 100%;
+  background: #44ce6f;
+  color: #ffffff;
+}
+
+.features-details-desc .features-details-accordion .accordion .accordion__item .accordion__title .accordion__toggle-button::before, .features-details-desc .features-details-accordion .accordion .accordion__item .accordion__title .accordion__toggle-button::after {
+  right: 0;
+  width: 40%;
+  background: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-details-desc .features-details-accordion .accordion .accordion__item .accordion__title .accordion__toggle-button.accordion__toggle-button_active::before {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.features-details-desc .features-details-accordion .accordion .accordion__item .accordion__value {
+  position: relative;
+  overflow: hidden;
+  color: #6084a4;
+  padding: 15px;
+  line-height: 1.9;
+}
+
+.features-details-area .separate {
+  margin-top: 80px;
+}
+
+.features-details-image {
+  text-align: center;
+}
+/*# sourceMappingURL=feature-details.css.map */

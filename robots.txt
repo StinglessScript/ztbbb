@@ -1,0 +1,17 @@
+## GENERAL SETTINGS
+ 
+## Enable robots.txt rules for all crawlers
+User-agent: *
+User-agent: Googlebot
+Disallow:
+User-agent: Googlebot-image
+Disallow:
+
+## Do not crawl checkout and user account pages
+Disallow: /cap-nhat-don-hang/
+Disallow: /san-pham/_checkout/
+Disallow: /thanh-toan/
+Disallow: /dang-nhap/
+
+## Long Vân Sitemap 
+Sitemap: https://longvan.net/sitemap.xml

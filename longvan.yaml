@@ -1,0 +1,90 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cmsweb-deployment
+  namespace: longvan-dev
+  labels:
+    app: cmsweb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cmsweb
+  template:
+    metadata:
+      labels:
+        app: cmsweb
+    spec:
+      volumes:
+      - name: host-localtime
+        hostPath:
+          path: /etc/localtime      
+      containers:
+      - name: cmsweb
+        image: images.longvan.int:5000/cmsweb:latest
+        imagePullPolicy: Always
+        ports:
+        - name: http 
+          containerPort: 3011
+        env:
+        - name: TZ
+          value: Asia/Ho_Chi_Minh
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cmsweb-service
+  namespace: longvan-dev
+spec:
+  selector:
+    app: cmsweb
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 3011
+    targetPort: http
+    protocol: TCP
+
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: scaling-cmsweb
+  namespace: longvan-dev
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cmsweb-deployment
+  minReplicas: 1
+  maxReplicas: 3
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: cmsweb-ingress
+    namespace: longvan-dev
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /
+      nginx.ingress.kubernetes.io/proxy-body-size: 100m
+      nginx.ingress.kubernetes.io/cache-enable: "true"
+      nginx.ingress.kubernetes.io/proxy-buffering: "on"
+spec:
+    ingressClassName: nginx
+    rules:
+      - host: cms.dev.longvan.vn
+        http:
+          paths:
+            - path: /
+              pathType: Prefix
+              backend:
+                service:
+                  name: cmsweb-service
+                  port:
+                    number: 3011
+    tls:
+      - hosts:
+           - cms.dev.longvan.vn
+        secretName: longvan-tls

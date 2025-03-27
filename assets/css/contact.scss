@@ -1,0 +1,226 @@
+/*
+@File: Pasona Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+==== INDEX PAGE CSS
+
+** - Blog Details CSS
+*/
+
+/*================================================
+Default CSS
+=================================================*/
+$font-family: 'Poppins', sans-serif;
+$light-green-color: #44ce6f;
+$white-color: #ffffff;
+$black-color: #0e314c;
+$navlink-color: #4a6f8a;
+$paragraph-color: #6084a4;
+$purple-color: #c679e3;
+$bg-color: #f7fafd;
+$bg-color2: #f9f6f6;
+$hosting-main-color: #032b8d;
+$gradient-color: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+$gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #53eedd, #a6ffcb);
+$transition: .5s;
+$font-size: 14px;
+
+/*================================================
+Contact CSS
+=================================================*/
+.contact-info-box {
+    justify-content: space-around;
+    text-align: center;
+    transition: .4s;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+    background: $white-color;
+    padding: 30px;
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+
+        .feather {
+            position: relative;
+            z-index: 10;
+            top: 1px;
+            margin-right: 15px;
+            display: inline-block;
+            color: $light-green-color;
+            transition: $transition;
+            width: 16px;
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+            padding-left: 35px;
+
+            li {
+                display: block;
+            }
+        }
+    }
+
+    .item {
+        display: flex;
+        padding-bottom: 8px;
+        align-items: flex-start;
+        width: 100%;
+
+        &:last-child {
+            padding-bottom: 0;
+
+        }
+
+     
+        .item-left {
+            display: flex;
+            width: 50%;
+            justify-content: flex-start;
+
+            .icon {
+                display: inline-block;
+                position: relative;
+                top: 20px;
+                width: 32px;
+                height: 32px;
+                line-height: 30px;
+                background: $bg-color;
+                border-radius: 50%;
+                font-size: 16px;
+                color: $light-green-color;
+                transition: .4s;
+                margin-right: 12px;
+
+                .feather {
+                    position: absolute;
+                    z-index: 11;
+                    top: 2px;
+                    left: 3px;
+                    width: 20px;
+                    height: 20px;
+                    overflow: unset;
+                }
+            }
+        }
+
+        .item-right {
+            text-align: left;
+
+            .feather {
+                position: relative;
+                z-index: 10;
+                top: 0px;
+                margin-right: 15px;
+                display: inline-block;
+                color: $light-green-color;
+                transition: $transition;
+                width: 16px;
+                overflow: unset;
+            }
+
+            ul {
+                list-style: none;
+                padding-top: 23px;
+                margin-left: 14px;
+            }
+        }
+    }
+
+    .item-left {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+
+        .icon {
+            display: inline-block;
+            position: relative;
+            top: 20px;
+            width: 32px;
+            height: 32px;
+            line-height: 30px;
+            background: $bg-color;
+            border-radius: 50%;
+            font-size: 16px;
+            color: $light-green-color;
+            transition: .4s;
+            margin-right: 12px;
+
+            .feather {
+                position: absolute;
+                overflow: unset;
+                z-index: 11;
+                top: 2px;
+                left: 3px;
+                width: 20px;
+                height: 20px;
+                overflow: unset;
+            }
+        }
+        .map_gg {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+
+            iframe,
+            object,
+            embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+
+    h3 {
+        margin: 25px 0 15px;
+
+        font: {
+            size: 18px;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+
+        a {
+            color: $paragraph-color;
+
+            &:hover {
+                color: $light-green-color;
+            }
+        }
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+
+        .icon {
+            color: $white-color;
+            background: $light-green-color;
+        }
+    }
+}
+
+#contactForm {
+    .btn {
+        margin-top: 10px;
+    }
+}

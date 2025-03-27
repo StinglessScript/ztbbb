@@ -1,0 +1,4 @@
+User-agent: Googlebot
+Disallow: /trang-ca-nhan
+User-agent: *
+Disallow: /trang-ca-nhan
